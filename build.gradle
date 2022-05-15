@@ -3,6 +3,10 @@ buildscript {
     ext {
         activity_version = "1.4.0"
         lifecycle_version = "2.5.0-beta01"
+        nav_version = "2.4.2"
+    }
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }
 }
 

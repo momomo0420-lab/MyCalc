@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mycalc.main.MainFragment"
+        android:label="簡易電卓"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.mycalc.result.ResultFragment"
+        android:label="計算結果"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="num1"
+            app:argType="integer" />
+        <argument
+            android:name="num2"
+            app:argType="integer" />
+        <argument
+            android:name="operator"
+            app:argType="string" />
+    </fragment>
+</navigation>
