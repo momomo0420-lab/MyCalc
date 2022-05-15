@@ -5,9 +5,13 @@
 
     <data>
         <import type="com.example.mycalc.MainActivity"/>
+        <import type="com.example.mycalc.MainViewModel"/>
         <variable
             name="handler"
             type="MainActivity" />
+        <variable
+            name="model"
+            type="MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,7 +80,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="0"
+            android:text="@{model.result}"
             android:textSize="48sp"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout"
